@@ -6,19 +6,19 @@ const projects = [
   {
     title: "Agência de marketing",
     description:
-      "Desenvolvi uma landing page atraente e responsiva para a agência Syrion.",
+      "Desenvolvi a landinpage para a agência Syrion pensando totalmente na experiência do usuário e em trazer um site simples e elegante para atrair leads.",
     image: "https://i.ibb.co/RQyZJhS/image-2.png",
   },
   {
     title: "Microcrédito",
     description:
-      "Criação de um e-commerce completo para uma ótica com integração de pagamento.",
+      "Desenvolvi a landingpage para o microcrédito com o intuito ser intuitiva e de trazer leads qualificados.",
     image: "https://i.ibb.co/YcKZmXQ/image.png",
   },
   {
     title: "Portfolio Pessoal",
     description:
-      "Desenvolvimento de um portfólio pessoal para exibição de projetos profissionais.",
+      "Desenvolvimento de um portfólio pessoal mostrando minhas habilidades técnicas para exibição de projetos profissionais.",
     image: "https://i.ibb.co/frKGWLd/image-1.png",
   },
 ];
@@ -49,7 +49,7 @@ export default function Portfolio() {
               {projects[currentIndex].title}
             </h2>
             <p>{projects[currentIndex].description}</p>
-            
+
             <div className="flex space-x-4 mt-4">
               <button
                 className="bg-white text-black px-4 py-2 rounded"
