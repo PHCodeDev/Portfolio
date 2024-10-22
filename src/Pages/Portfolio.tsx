@@ -72,7 +72,7 @@ export default function Portfolio() {
                 Próximo
               </button>
             </div>
-            <div className="pt-10">
+            <div className="pb-10 lg:pb-0 lg:pt-10">
               <Icons />
             </div>
           </motion.div>
