@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion"; 
 import Icons from "./Icons";
 import Navbar from "./Navbar";
 
@@ -21,17 +22,22 @@ export default function Educacao() {
       >
         <Navbar />
         <div className="w-[350px] lg:w-[1200px] 2xl:w-[1600px] mx-auto flex justify-between">
-          <div className="my-auto text-branco w-[500px]">
-            <h2 className="font-medium text-[10vh]">Formação</h2>
-            <ul>
+          <motion.div 
+            className="my-auto text-branco w-[500px]"
+            initial={{ opacity: 0, x: -100 }} 
+            animate={{ opacity: 1, x: 0 }} 
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <h2 className="font-medium text-[6vh] lg:text-[10vh]">Formação</h2>
+            <ul className="mt-10 lg:mt-0">
               <li>2021</li>
-              <li className="text-[4vh] font-medium">
+              <li className="text-[3vh] lg:text-[4vh] font-medium">
                 Curso técnico em Informática
               </li>
             </ul>
             <ul className="my-6">
               <li>2024</li>
-              <li className="text-[4vh] font-medium">
+              <li className="text-[3vh] lg:text-[4vh] font-medium">
                 Formação de cursos Alura (
                 <span
                   className="text-verde cursor-pointer"
@@ -44,31 +50,22 @@ export default function Educacao() {
             </ul>
             <ul>
               <li>2024</li>
-              <li className="text-[4vh] font-medium">
+              <li className="text-[3vh] lg:text-[4vh] font-medium">
                 Faculdade em Análise e Desenvolvimento de Sistemas
               </li>
             </ul>
             <div className="pt-10">
               <Icons />
             </div>
-          </div>
-          <div>
-            <img
-              className="h-[500px]"
-              src="https://i.ibb.co/TYvdYhz/Group-24.png"
-              alt="Educação"
-            />
-          </div>
+          </motion.div>
         </div>
 
-        {/* Popup */}
+      
         {showPopup && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
             <div className="bg-white p-8 rounded-lg shadow-lg max-w-2xl w-full">
               <h3 className="text-2xl font-bold mb-4">Cursos Alura</h3>
               <div className="max-h-96 overflow-y-auto">
-                
-               
                 <ul className="grid grid-cols-2 gap-5 pl-5">
                   <li>
                     <img
@@ -100,7 +97,7 @@ export default function Educacao() {
                       alt="Tailwind"
                     />
                   </li>
-                  
+
                   <li>
                     <img
                       src="https://i.ibb.co/hXGGP2K/image-33.png"
@@ -119,7 +116,6 @@ export default function Educacao() {
                       alt="Figma 2"
                     />
                   </li>
-                  
                 </ul>
               </div>
               <button
