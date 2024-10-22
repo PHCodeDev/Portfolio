@@ -30,24 +30,28 @@ export default function SocialLinks() {
             color: "#25D366",
             icon: "fab fa-whatsapp",
             link: "https://wa.me/88988123553",
+            label: "Entre em contato pelo WhatsApp",
           },
           {
             platform: "linkedin",
             color: "#0077B5",
             icon: "fab fa-linkedin-in",
-            link: "https://www.linkedin.com/in/pedro-henrique-de-morais-628946258/", 
+            link: "https://www.linkedin.com/in/pedro-henrique-de-morais-628946258/",
+            label: "Veja meu perfil no LinkedIn",
           },
           {
             platform: "github",
             color: "#333333",
             icon: "fab fa-github",
-            link: "https://github.com/PHCodeDev", 
+            link: "https://github.com/PHCodeDev",
+            label: "Visite meu repositório no GitHub",
           },
           {
             platform: "google",
             color: "#DB4437",
             icon: "fab fa-google",
-            onClick: handleCopyEmail, 
+            onClick: handleCopyEmail,
+            label: "Copiar e-mail",
           },
         ].map(({ platform, color, icon, link, onClick }) => (
           <li key={platform} className="relative group">
