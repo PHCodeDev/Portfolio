@@ -14,9 +14,8 @@ const tabs = [
 export default function Navbar() {
   const location = useLocation();
   const [activeTab, setActiveTab] = useState(tabs[0].id);
-  const [menuOpen, setMenuOpen] = useState(false); // Controla o estado do menu móvel
+  const [menuOpen, setMenuOpen] = useState(false); 
 
-  // Atualizar o estado da aba ativa com base no caminho atual da URL
   useEffect(() => {
     const currentTab = tabs.find((tab) => tab.path === location.pathname);
     if (currentTab) {
@@ -24,21 +23,17 @@ export default function Navbar() {
     }
   }, [location.pathname]);
 
-  // Função para alternar o estado do menu
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
     <div className="relative z-10">
-      {/* Menu em dispositivos móveis */}
       <div className="lg:hidden flex justify-between items-center p-4">
       <button onClick={toggleMenu} className="text-verde text-3xl">
-          {menuOpen ? <FaTimes /> : <FaBars />} {/* Ícones de abrir/fechar */}
+          {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
         
         
       </div>
-
-      {/* Menu expandido */}
       <div
         className={`lg:flex lg:py-10 w-full lg:w-[1200px] 2xl:w-[1600px] mx-auto lg:bg-transparent lg:static ${
           menuOpen ? "block" : "hidden"
@@ -51,7 +46,7 @@ export default function Navbar() {
               key={tab.id}
               onClick={() => {
                 setActiveTab(tab.id);
-                setMenuOpen(false); // Fecha o menu ao clicar
+                setMenuOpen(false);
               }}
               className={`${
                 activeTab === tab.id ? "text-azul" : "hover:text-white/60"
