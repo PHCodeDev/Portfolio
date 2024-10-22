@@ -47,7 +47,7 @@ export default function Sobre() {
             variants={imageVariants}
           >
             <img
-              className="h-[400px] lg:h-[497px] mb-4 transition-all duration-300 ease-in-out hover:scale-105"
+              className="h-[400px] lg:h-[480px] mb-4 transition-all duration-300 ease-in-out hover:scale-105"
               src="https://i.ibb.co/TYvdYhz/Group-24.png"
               alt="Imagem do desenvolvedor"
             />

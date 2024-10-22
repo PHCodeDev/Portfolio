@@ -54,7 +54,7 @@ export default function Educacao() {
                 Faculdade em Análise e Desenvolvimento de Sistemas
               </li>
             </ul>
-            <div className="pt-10">
+            <div className="pb-10">
               <Icons />
             </div>
           </motion.div>

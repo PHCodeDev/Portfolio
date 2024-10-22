@@ -35,7 +35,7 @@ export default function Navbar() {
         
       </div>
       <div
-        className={`lg:flex lg:py-10 w-full lg:w-[1200px] 2xl:w-[1600px] mx-auto lg:bg-transparent lg:static ${
+        className={`lg:flex lg:py-8 w-full lg:w-[1200px] 2xl:w-[1600px] mx-auto lg:bg-transparent lg:static ${
           menuOpen ? "block" : "hidden"
         } lg:block`}
       >
