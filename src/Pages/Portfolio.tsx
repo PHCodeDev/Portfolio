@@ -5,22 +5,25 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Agência de marketing",
+    title: "Agência de Marketing",
     description:
       "Desenvolvi a landinpage para a agência Syrion pensando totalmente na experiência do usuário e em trazer um site simples e elegante para atrair leads.",
     image: "https://i.ibb.co/RQyZJhS/image-2.png",
+    link: "https://syrion.com.br/",
   },
   {
     title: "Microcrédito",
     description:
       "Desenvolvi a landingpage para o microcrédito com o intuito ser intuitiva e de trazer leads qualificados.",
     image: "https://i.ibb.co/YcKZmXQ/image.png",
+    link: "https://microcredito-landingpage.vercel.app/",
   },
   {
-    title: "Portfolio Pessoal",
+    title: "Sistema de Agendamentos",
     description:
-      "Desenvolvimento de um portfólio pessoal mostrando minhas habilidades técnicas para exibição de projetos profissionais.",
-    image: "https://i.ibb.co/frKGWLd/image-1.png",
+      "Desenvolvi um sistema de agendamentos para barbearias, focado em otimizar a experiência do cliente e simplificar a organização interna.",
+    image: "https://i.ibb.co/p4N6Wd3/Captura-de-Tela-142-1.png",
+    link: "https://agendamento-cabelereiro.vercel.app/",
   },
 ];
 
@@ -82,11 +85,17 @@ export default function Portfolio() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <img
-              className="w-[330px] mx-auto lg:w-[550px] pb-10 transition-transform duration-500 ease-in-out transform hover:scale-105"
-              src={projects[currentIndex].image}
-              alt={projects[currentIndex].title}
-            />
+            <a
+              href={projects[currentIndex].link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="w-[330px] mx-auto lg:w-[550px] pb-10 transition-transform duration-500 ease-in-out transform hover:scale-105"
+                src={projects[currentIndex].image}
+                alt={projects[currentIndex].title}
+              />
+            </a>
           </motion.div>
         </div>
       </section>
